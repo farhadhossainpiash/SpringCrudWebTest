@@ -1,17 +1,9 @@
 package com.springCrudWebTest.demo.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
 
-@Entity
-@Table(name="employees")
+
 public class Employee {
    
-    @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
 	private int id;
 	private String name;
 	private String address;
@@ -71,5 +63,13 @@ public class Employee {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+
+
+	@Override
+	public String toString() {
+		return "Employee [id=" + id + ", name=" + name + ", address=" + address + ", email=" + email + "]";
+	}
+	
+	
 	
 }
